@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>excel上传和解析</title>
+</head>
+<body>
+
+<form th:action="@{/organize/uploadExcel}"  method="post" enctype="multipart/form-data">
+    <p><input th:type="file" th:name="file"></p>
+    <p><input th:type="submit" th:value="submit"></p>
+</form>
+
+
+</body>
+</html>

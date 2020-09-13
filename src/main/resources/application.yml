@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost/zhangqi?serverTimezone=GMT
+    username: zhangqi
+    password: root
+  thymeleaf:
+    prefix: classpath:/templates/
+    check-template-location: true
+    suffix: .html
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
+      #mode: HTML5
+      #cache: false
+    mode: HTML5
+    cache: false
+  mvc:
+    static-path-pattern: /**
+  resources:
+    static-locations: /META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/
+
+
+mybatis:
+  mapper-locations: classpath:mapping/*Mapper.xml
+  type-aliases-package: com.example.excelhandle.pojo
+server:
+  port: 9000
